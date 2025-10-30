@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function create()
     {
-        return view('userscreate');
+        return view('user.create');
     }
 
     public function store(Request $request)
