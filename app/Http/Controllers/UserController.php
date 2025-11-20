@@ -38,6 +38,6 @@ class UserController extends Controller
     {
         $users = User::orderByDesc('id')->paginate(10);
 
-        return view('users.index',['users'=>$users]);
+        return view('user.index', ['users' => $users]);
     }
 }
