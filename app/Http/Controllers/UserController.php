@@ -33,4 +33,11 @@ class UserController extends Controller
                 ->with('error', 'Erro ao cadastrar: '.$e->getMessage());
         }
     }
+
+    public function index()
+    {
+        $users = User::orderByDesc('id')->paginate(10);
+
+        return view('users.index',['users'=>$users]);
+    }
 }
