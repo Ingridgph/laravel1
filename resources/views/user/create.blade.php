@@ -13,7 +13,7 @@
 
             <div class="mb-4">
                 <label for="name" class="form-label">Nome:</label>
-                <input type="text" name="name" id="name" placeholder="Nome Completo" value="{{ old('name') }}"
+                <input type="text" name="name" id="name" placeholder="Nome Completo" value="{{ old('nome') }}"
                     class="form-input"><br><br>
             </div>
 

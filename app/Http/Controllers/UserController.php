@@ -20,7 +20,7 @@ class UserController extends Controller
         try {
             
             User::create([
-                'name' => $request->name,
+                'nome' => $request->nome,
                 'email' => $request->email,
                 'password' => $request->password, 
             ]);

@@ -11,7 +11,7 @@
 @endif
 
 @if ($errors->any())
-    <div class="alert-error"></div>
+    <div class="alert-erro"></div>
     @foreach ($errors->all() as $error)
         {{ $error }}<br>
     @endforeach
