@@ -1,74 +1,67 @@
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
 @import "tailwindcss";
+@layer components {
 
-@layer components{
-    .main-container{
+    .main-container {
         @apply flex flex-col h-screen bg-pink-50;
     }
 
-    .header{
+    .header {
         @apply bg-pink-500 text-white p-4 w-full;
     }
-    .content-header{
-        @apply max-w-6xl mx-auto flex items-center;
+
+    .content-header {
+        @apply max-w-6xl mx-auto flex items-center justify-between;
     }
 
-    .title-logo{
+    .title-logo {
         @apply text-xl font-bold;
     }
 
-    .list-nav-link{
+    .list-nav-link {
         @apply flex space-x-6 ml-6;
     }
 
-    .nav-link{
+    .nav-link {
         @apply hover:text-black transition-colors;
     }
 
-    .content{
+    .content {
         @apply flex-1 px-2 py-6 max-w-6xl mx-auto w-full;
     }
 
-    .content-title{
+    .content-title {
         @apply flex justify-between items-center mb-6;
     }
 
-    .content-title{
+    .page-title {
         @apply text-2xl;
     }
-    
-    .form-container{
+
+    .form-container {
         @apply mt-6 bg-white shadow-md rounded-lg p-6;
     }
-    .form-label{
+
+    .form-label {
         @apply block text-sm font-semibold;
     }
-    .form-container{
-        @apply mt-6 bg-white shadow-md rounded-lg p-6;
+
+    .form-input {
+        @apply border border-gray-300 rounded p-2 w-full;
     }
 
-    .btn-primary{
-        @apply  bg-pink-500 text-white px-4 rounded-md hover:bg-pink-700 transition-colors;
+    .btn-primary {
+        @apply bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition-colors;
     }
 
-    .btn-success{
-        @apply  p-2  bg-green-500 text-white px-4 rounded-md hover:bg-green-700 cursor-pointer transition-colors;
+    .btn-success {
+        @apply bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700 cursor-pointer transition-colors;
     }
 
-    .alert-success{
-        @apply p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-200 dark:bg-gray-800 dark:text-green-400;
+    .alert-success {
+        @apply p-4 mb-4 text-sm text-green-900 rounded-lg bg-green-200 dark:text-green-400;
     }
 
-     .alert-erro{
-        @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-200 dark:bg-gray-800 dark:text-red-400;
+    .alert-erro {
+        @apply p-4 mb-4 text-sm text-red-900 rounded-lg bg-red-200 dark:text-red-400;
     }
 }

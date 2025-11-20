@@ -22,9 +22,21 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' =>['required', 'max:100'],
-            'email'=>['required','email'],
-            'password'=>['required']
+            'name' => 'required|max:100',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Campo name obrigatório',
+            'email.required' => 'Campo email obrigatório',
+            'password.required' => 'Campo password obrigatório',
+            'email.email' => 'Este campo deve ser do tipo email',
+            'email.unique' => 'Este email deve ser unico',
+            'password.min' => 'Campo password precisa de no minimo :min digitos',
         ];
     }
 }
