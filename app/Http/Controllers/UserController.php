@@ -34,6 +34,27 @@ class UserController extends Controller
         }
     }
 
+    public function edit(User $ , UserRequest $request)
+    {
+        try {
+
+            User::update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $request->password,
+            ]);
+
+            return redirect()
+                ->route('user.create')
+                ->with('success', 'Usuário cadastrado com sucesso');
+
+        } catch (Exception $e) {
+            return back()
+                ->withInput()
+                ->with('error', 'Erro ao cadastrar: '.$e->getMessage());
+        }
+    }
+
     public function index()
     {
         $users = User::orderByDesc('id')->paginate(2);
